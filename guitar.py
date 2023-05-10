@@ -92,12 +92,37 @@ def triads_in_major_scale():
     print(notes)
     get_triad(notes)
 
+def parallel_keys():
+  parallel_keys = open('parallel_keys.json')
+  parallel_keys = json.load(parallel_keys)
+  a = input("What key do you want to use? ")
+  parallel_key = parallel_keys[a]
+  print("The parallel key for {a} is {parallel_key}".format(a=a, parallel_key=parallel_key))
+  print("The notes for {parallel_key} are: ".format(parallel_key=parallel_key))
+  length_parallel_key = len(parallel_key)
+  min_or_maj = parallel_key[length_parallel_key - 5:]
+  if min_or_maj == "Minor":
+    minor_scale(parallel_key)
+  else:
+    parallel_key = parallel_key + " Major"
+    major_scale(parallel_key)
+
+def minor_scale(x):
+  minor_scales = open('minor_scale.json')
+  minor_scales = json.load(minor_scales)
+  print(minor_scales[x])
+
+def major_scale(x):
+  major_scales = open('major_scale.json')
+  major_scales = json.load(major_scales)
+  print(major_scales[x])
 def start():
   print("What would you like to do")
   print("1: fretboard memorization")
   print("2: triad fingering")
   print("3: study triads")
   print("4: see the triad on the high 3 strings")
+  print("5: see the parallel key")
   answer = (input("Well? "))
   if answer == "1":
     fretboard_memorization()
@@ -107,6 +132,8 @@ def start():
     study_triad()
   elif answer == "4":
     top_three_triads()
+  elif answer == "5":
+    parallel_keys()
 
 if __name__ == '__main__':
   start()
