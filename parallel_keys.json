@@ -10,5 +10,17 @@
     "G#": "G# Minor",
     "A": "A Minor",
     "A#": "A# Minor",
-    "B": "B Minor"
+    "B": "B Minor",
+    "C Minor": "C",
+    "C# Minor": "C#",
+    "D Minor": "D",
+    "D# Minor": "D#",
+    "E Minor": "E",
+    "F Minor": "F",
+    "F# Minor": "F#",
+    "G Minor": "G",
+    "G# Minor": "G#",
+    "A Minor": "A",
+    "A# Minor": "A#",
+    "B Minor": "B"
 }
