@@ -116,6 +116,12 @@ def major_scale(x):
   major_scales = open('major_scale.json')
   major_scales = json.load(major_scales)
   print(major_scales[x])
+
+def ionian_scale(x):
+  ionian_scales = open('ionian_scale.json')
+  ionian_scales = json.load(ionian_scales)
+  x = x[0] + " Ionian"
+  print(ionian_scales[x])
 def start():
   print("What would you like to do")
   print("1: fretboard memorization")
