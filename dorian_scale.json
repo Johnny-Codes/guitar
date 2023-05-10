@@ -1,0 +1,14 @@
+{
+    "C Dorian": ["C", "D", "Eb", "F", "G", "A", "Bb"],
+    "C# Dorian": ["C#", "D#", "E", "F#", "G#", "A#", "B"],
+    "D Dorian": ["D", "E", "F", "G", "A", "Bb", "C"],
+    "D# Dorian": ["D#", "E#", "F#", "G#", "A#", "B", "C#"],
+    "E Dorian": ["E", "F#", "G", "A", "B", "C", "D"],
+    "F Dorian": ["F", "G", "Ab", "Bb", "C", "D", "Eb"],
+    "F# Dorian": ["F#", "G#", "A", "B", "C#", "D#", "E"],
+    "G Dorian": ["G", "A", "Bb", "C", "D", "Eb", "F"],
+    "G# Dorian": ["G#", "A#", "B", "C#", "D#", "E", "F#"],
+    "A Dorian": ["A", "B", "C", "D", "E", "F", "G"],
+    "A# Dorian": ["A#", "B#", "C#", "D#", "E#", "F#", "G#"],
+    "B Dorian": ["B", "C#", "D", "E", "F#", "G", "A"]
+  }

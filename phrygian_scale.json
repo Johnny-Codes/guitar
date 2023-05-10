@@ -1,0 +1,19 @@
+{
+    "C Phrygian": ["C", "Db", "Eb", "F", "G", "Ab", "Bb"],
+    "C# Phrygian": ["C#", "D", "E", "F#", "G#", "A", "B"],
+    "Db Phrygian": ["Db", "Ebb", "Fb", "Gb", "Abb", "Bbb", "Cb"],
+    "D Phrygian": ["D", "E", "F", "G", "A", "Bb", "C"],
+    "D# Phrygian": ["D#", "E#", "F#", "G#", "A#", "B", "C#"],
+    "Eb Phrygian": ["Eb", "Fb", "Gb", "Ab", "Bbb", "Cb", "Db"],
+    "E Phrygian": ["E", "F", "G", "A", "Bb", "C", "D"],
+    "F Phrygian": ["F", "Gb", "Ab", "Bb", "C", "Db", "Eb"],
+    "F# Phrygian": ["F#", "G", "A", "B", "C#", "D", "E"],
+    "Gb Phrygian": ["Gb", "Abb", "Bbb", "Cb", "Dbb", "Ebb", "Fb"],
+    "G Phrygian": ["G", "A", "Bb", "C", "D", "Eb", "F"],
+    "G# Phrygian": ["G#", "A#", "B", "C#", "D#", "E", "F#"],
+    "Ab Phrygian": ["Ab", "Bbb", "Cb", "Db", "Ebb", "Fb", "Gb"],
+    "A Phrygian": ["A", "Bb", "C", "D", "Eb", "F", "G"],
+    "A# Phrygian": ["A#", "B", "C#", "D#", "E", "F#", "G#"],
+    "Bb Phrygian": ["Bb", "Cb", "Db", "Eb", "F", "Gb", "Ab"],
+    "B Phrygian": ["B", "C", "D", "E", "F#", "G", "A"]
+  }

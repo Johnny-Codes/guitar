@@ -1,0 +1,9 @@
+{
+    "C Ionian": ["C", "D", "E", "F", "G", "A", "B"],
+    "D Ionian": ["D", "E", "F#", "G", "A", "B", "C#"],
+    "E Ionian": ["E", "F#", "G#", "A", "B", "C#", "D#"],
+    "F Ionian": ["F", "G", "A", "Bb", "C", "D", "E"],
+    "G Ionian": ["G", "A", "B", "C", "D", "E", "F#"],
+    "A Ionian": ["A", "B", "C#", "D", "E", "F#", "G#"],
+    "B Ionian": ["B", "C#", "D#", "E", "F#", "G#", "A#"]
+  }
