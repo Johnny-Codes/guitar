@@ -213,7 +213,7 @@ fretstrings = {
     {"String": 3, "Fret": 1},
     {"String": 2, "Fret": 9},
     {"String": 1, "Fret": 4},
-  ], 
+  ],
   "A": [
     {"String": 6, "Fret": 5},
     {"String": 5, "Fret": 12},
@@ -296,7 +296,7 @@ ionian_scales = {
   "B Ionian": ["B", "C#", "D#", "E", "F#", "G#", "A#"]
 }
 
-dorian_scales = {    {
+dorian_scales = {
   "C Dorian": ["C", "D", "Eb", "F", "G", "A", "Bb"],
   "C# Dorian": ["C#", "D#", "E", "F#", "G#", "A#", "B"],
   "D Dorian": ["D", "E", "F", "G", "A", "Bb", "C"],
@@ -337,8 +337,8 @@ def fretboard_memorization():
     print("      ", a)
     for value in fretstrings[a]:
         print("On string:", value['String'], "fret:", value['Fret'])
-    
-    main()
+
+    start()
 
 def get_triad():
     a = random.choice(list(triads))
@@ -347,8 +347,8 @@ def get_triad():
         print(value)
         for y in fretstrings[value]:
             print(y)
-    
-    main()
+
+    start()
 
 def get_specific_triad(note):
     for value in [triads(note)]:
@@ -365,7 +365,7 @@ def study_triad():
         print("Correct")
     else:
         print(a)
-    
+
     study_triad()
 
 def top_three_triads():
@@ -375,8 +375,8 @@ def top_three_triads():
         print(value)
         for y in fretstrings[value][3:6]:
             print("String:", y['String'], "Fret:", y['Fret'])
-    
-    main()
+
+    start()
 
 def triads_in_major_scale():
     a = random.choice(list(major_scales))
@@ -386,7 +386,7 @@ def triads_in_major_scale():
         print(notes)
         get_triad(notes)
 
-def main():
+def start():
     print("What would you like to do")
     print("1: fretboard memorization")
     print("2: triad fingering")
@@ -402,6 +402,6 @@ def main():
     elif answer == "4":
         top_three_triads()
 
-        
-
-
+if __name__ == '__main__':
+    print('Welcome to the guitar practice program')
+    start()
