@@ -1,38 +1,17 @@
 import json
 import random
 
-parallel_keys = {
-    "C": "C Minor",
-    "C#": "C# Minor",
-    "D": "D Minor",
-    "D#": "D# Minor",
-    "E": "E Minor",
-    "F": "F Minor",
-    "F#": "F# Minor",
-    "G": "G Minor",
-    "G#": "G# Minor",
-    "A": "A Minor",
-    "A#": "A# Minor",
-    "B": "B Minor",
-}
+parallel_keys = open('parallel_keys.json')
+parallel_keys = json.load(parallel_keys)
 
-relative_keys = {
-  "C Major": "A Minor",
-  "G Major": "E Minor",
-  "D Major": "B Minor",
-  "A Major": "F# Minor",
-  "E Major": "C# Minor",
-  "B Major": "G# Minor",
-  "F# Major": "D# Minor",
-  "C# Major": "A# Minor",
-  "F Major": "D Minor",
-  "Bb Major": "G Minor",
-  "Eb Major": "C Minor",
-  "Ab Major": "F Minor",
-  "Db Major": "Bb Minor",
-  "Gb Major": "Eb Minor",
-  "Cb Major": "Ab Minor"
-}
+relative_keys = open('relative_keys.json')
+relative_keys = json.load(relative_keys)
+
+fretstrings = open('fret_strings.json')
+fretstrings = json.load(fretstrings)
+
+major_scales = open('major_scale.json')
+major_scales = json.load(major_scales)
 
 
 triads = {
@@ -107,168 +86,6 @@ triads = {
   "A# Minor 7th": ["A#", "C#", "F", "G#"],
   "B Major 7th": ["B", "D#", "F#", "A#"],
   "B Minor 7th": ["B", "D", "F#", "A"]
-}
-
-fretstrings = {
-  "C": [
-    {"String": 6, "Fret": 8},
-    {"String": 5, "Fret": 3},
-    {"String": 4, "Fret": 10},
-    {"String": 3, "Fret": 5},
-    {"String": 2, "Fret": 1},
-    {"String": 1, "Fret": 8}
-  ],
-  "C#": [
-    {"String": 6, "Fret": 9},
-    {"String": 5, "Fret": 4},
-    {"String": 4, "Fret": 11},
-    {"String": 3, "Fret": 6},
-    {"String": 2, "Fret": 2},
-    {"String": 1, "Fret": 9}
-  ],
-  "Db": [
-    {"String": 6, "Fret": 9},
-    {"String": 5, "Fret": 4},
-    {"String": 4, "Fret": 11},
-    {"String": 3, "Fret": 6},
-    {"String": 2, "Fret": 2},
-    {"String": 1, "Fret": 9}
-  ],
-  "D": [
-    {"String": 6, "Fret": 10},
-    {"String": 5, "Fret": 5},
-    {"String": 4, "Fret": 12},
-    {"String": 3, "Fret": 7},
-    {"String": 2, "Fret": 3},
-    {"String": 1, "Fret": 10}
-  ],
-  "D#": [
-    {"String": 6, "Fret": 11},
-    {"String": 5, "Fret": 6},
-    {"String": 4, "Fret": 1},
-    {"String": 3, "Fret": 8},
-    {"String": 2, "Fret": 4},
-    {"String": 1, "Fret": 11}
-  ],
-  "Eb": [
-    {"String": 6, "Fret": 11},
-    {"String": 5, "Fret": 6},
-    {"String": 4, "Fret": 1},
-    {"String": 3, "Fret": 8},
-    {"String": 2, "Fret": 4},
-    {"String": 1, "Fret": 11}
-  ],
-  "E": [
-    {"String": 6, "Fret": 12},
-    {"String": 5, "Fret": 7},
-    {"String": 4, "Fret": 2},
-    {"String": 3, "Fret": 9},
-    {"String": 2, "Fret": 5},
-    {"String": 1, "Fret": 12}
-  ],
-  "F": [
-    {"String": 6, "Fret": 1},
-    {"String": 5, "Fret": 8},
-    {"String": 4, "Fret": 3},
-    {"String": 3, "Fret": 10},
-    {"String": 2, "Fret": 6},
-    {"String": 1, "Fret": 1}
-  ],
-  "F#": [
-    {"String": 6, "Fret": 2},
-    {"String": 5, "Fret": 9},
-    {"String": 4, "Fret": 4},
-    {"String": 3, "Fret": 11},
-    {"String": 2, "Fret": 7},
-    {"String": 1, "Fret": 2}
-  ],
-  "Gb": [
-    {"String": 6, "Fret": 2},
-    {"String": 5, "Fret": 9},
-    {"String": 4, "Fret": 4},
-    {"String": 3, "Fret": 11},
-    {"String": 2, "Fret": 7},
-    {"String": 1, "Fret": 2}
-  ],
-  "G": [
-    {"String": 6, "Fret": 3},
-    {"String": 5, "Fret": 10},
-    {"String": 4, "Fret": 5},
-    {"String": 3, "Fret": 12},
-    {"String": 2, "Fret": 8},
-    {"String": 1, "Fret": 3}
-  ],
-  "G#": [
-    {"String": 6, "Fret": 4},
-    {"String": 5, "Fret": 11},
-    {"String": 4, "Fret": 6},
-    {"String": 3, "Fret": 1},
-    {"String": 2, "Fret": 9},
-    {"String": 1, "Fret": 4},
-  ],
-  "Ab": [
-    {"String": 6, "Fret": 4},
-    {"String": 5, "Fret": 11},
-    {"String": 4, "Fret": 6},
-    {"String": 3, "Fret": 1},
-    {"String": 2, "Fret": 9},
-    {"String": 1, "Fret": 4},
-  ],
-  "A": [
-    {"String": 6, "Fret": 5},
-    {"String": 5, "Fret": 12},
-    {"String": 4, "Fret": 7},
-    {"String": 3, "Fret": 2},
-    {"String": 2, "Fret": 10},
-    {"String": 1, "Fret": 5},
-  ],
-  "A#": [
-    {"String": 6, "Fret": 6},
-    {"String": 5, "Fret": 1},
-    {"String": 4, "Fret": 8},
-    {"String": 3, "Fret": 3},
-    {"String": 2, "Fret": 11},
-    {"String": 1, "Fret": 6},
-  ],
-  "Bb": [
-    {"String": 6, "Fret": 6},
-    {"String": 5, "Fret": 1},
-    {"String": 4, "Fret": 8},
-    {"String": 3, "Fret": 3},
-    {"String": 2, "Fret": 11},
-    {"String": 1, "Fret": 6},
-  ],
-  "B": [
-    {"String": 6, "Fret": 7},
-    {"String": 5, "Fret": 2},
-    {"String": 4, "Fret": 9},
-    {"String": 3, "Fret": 4},
-    {"String": 2, "Fret": 12},
-    {"String": 1, "Fret": 7},
-  ],
-  "Cb": [
-    {"String": 6, "Fret": 7},
-    {"String": 5, "Fret": 2},
-    {"String": 4, "Fret": 9},
-    {"String": 3, "Fret": 4},
-    {"String": 2, "Fret": 12},
-    {"String": 1, "Fret": 7},
-  ],
-}
-
-major_scales = {
-    "C Major": ["C", "D", "E", "F", "G", "A", "B"],
-    "C# Major": ["C#", "D#", "F", "F#", "G#", "A#", "C"],
-    "D Major": ["D", "E", "F#", "G", "A", "B", "C#"],
-    "D# Major": ["D#", "F", "G", "G#", "A#", "C", "D"],
-    "E Major": ["E", "F#", "G#", "A", "B", "C#", "D#"],
-    "F Major": ["F", "G", "A", "A#", "C", "D", "E"],
-    "F# Major": ["F#", "G#", "A#", "B", "C#", "D#", "F"],
-    "G Major": ["G", "A", "B", "C", "D", "E", "F#"],
-    "G# Major": ["G#", "A#", "C", "C#", "D#", "F", "G"],
-    "A Major": ["A", "B", "C#", "D", "E", "F#", "G#"],
-    "A# Major": ["A#", "C", "D", "D#", "F", "G", "A"],
-    "B Major": ["B", "C#", "D#", "E", "F#", "G#", "A#"]
 }
 
 minor_scales = {
